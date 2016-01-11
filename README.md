@@ -8,11 +8,9 @@ enum Kind {
     C,
 }
 
-
 impl Default for Kind {
     fn default() -> Kind { Kind::A }
 }
-
 
 #[derive(Default, Debug)]
 struct DefaultObject {
@@ -22,7 +20,6 @@ struct DefaultObject {
     baz: Kind,
 }
 
-
 fn main() {
     let objs: Vec<DefaultObject> = vec![
             DefaultObject{foo: 42, ..Default::default()},
@@ -30,6 +27,4 @@ fn main() {
     ] ;
     print!("{:?}", objs)
 }
-
-
 ```
