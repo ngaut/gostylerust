@@ -28,3 +28,22 @@ fn main() {
     print!("{:?}", objs)
 }
 ```
+
+# Table driven tests
+```rust
+ #[test]
+    fn test_maybe_first_index() {
+        // a, b, c, d, e,
+        let tests: Vec<(Option<int>, u64, bool, u64)> = vec![  
+            (Some(30), 5, false, 0),
+            (None, 0, false, 0),
+            // and more
+        ];
+
+        for (age, b, c, d) in tests {
+            assert(age < 100);
+            // and more check
+        }
+    }
+
+```
