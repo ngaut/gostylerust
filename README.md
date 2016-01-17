@@ -41,7 +41,7 @@ fn main() {
         ];
 
         for (age, b, c, d) in tests {
-            assert(age < 100);
+            assert!(age < 100);
             // and more check
         }
     }
